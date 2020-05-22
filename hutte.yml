@@ -12,6 +12,7 @@ push_script: |
 
 pull_script: |
   sfdx force:source:pull --loglevel fatal --json -f | hutte_track_changes
+  sfdx force:source:retrieve -p force-app/main/default --json | hutte_track_changes
 
 # The scripts defined under this keys will be displayed as
 # buttons on hutte.io
